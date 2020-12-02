@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio Tablero</title>
+</head>
+
+<body>
+    <script>
+        let medida;
+        medida=parseInt(prompt("Introduce la medida de tablero (anchura o altura)"));
+        for (let alto=1; alto<=medida; alto=alto+1){
+            let casilla = "";
+            for (let ancho=1; ancho<=medida; ancho=ancho+1){
+                if (alto % 2 != 0) { //posicion impar del alto
+                    if (ancho % 2 != 0){ //posicion impar del ancho
+                        casilla=casilla + "O";
+                    } else {
+                        casilla=casilla + "X";
+                    }    
+                } else { //posicion par del alto
+                    if (ancho % 2 != 0){ //posicion impar del ancho
+                        casilla=casilla + "X";
+                    } else {
+                        casilla=casilla + "O";
+                    }
+                } 
+            }
+            console.log(casilla);
+        }
+    </script>
+</body>
+
+</html>
